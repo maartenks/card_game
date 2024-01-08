@@ -2,13 +2,15 @@
 #include <iomanip>
 #include <iostream>
 #include "include/deck.h"
+#include "include/card.h"
 
 using namespace std;
  
 int main(int argc, char *argv[])
 {
-    deck new_deck;
-    cout << new_deck.deck_size << endl;
-    cout << "Hello world" << endl;
+    Deck deck;
+    for (Card card : deck.get_cards()) {
+        card.print_card();
+    }
     return -1;
 }

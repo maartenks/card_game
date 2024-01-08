@@ -2,22 +2,29 @@
 #include <string>
 #include <vector>
 #include "deck.h"
+#include "card.h"
 
 using namespace std;
 
-string card_numbers[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-string card_types[4] = {"C", "D", "S", "H"}; //{"Clubs", "Diamonds", "Spades", "Hearts"}
-
-deck::deck() {
+Deck::Deck() {
     this->deck_size = 52;
     this->create_deck();
 }
 
-void deck::create_deck() {
-    for (int i = 0; i < this->card_numbers->length(); i++) {
-        for (int j = 0; j < this->card_types->length(); j++) {
-            play_deck.push_back(this->card_types[j] + this->card_numbers[i]);
+void Deck::create_deck() {
+    for (int i = (int) Suit::clubs; i <= (int) Suit::spades; i++) {
+        for (int j = (int) Rank::ace; j <= (int) Rank::king; j++) {
+            play_deck.push_back(Card(static_cast<Rank>(j), static_cast<Suit>(i)));
         }
     }
     cout << "Playing deck created" << endl;
 }
+
+vector<Card> Deck::get_cards() {
+    return play_deck;
+}
+
+void Deck::shuffle() {
+    //TODO
+}
+
