@@ -18,7 +18,7 @@ void Deck::create_deck() {
             cards.push_back(Card(static_cast<Rank>(j), static_cast<Suit>(i)));
         }
     }
-    cout << "Playing deck created" << endl;
+    cout << "Playing deck created!" << endl;
 }
 
 vector<Card> Deck::get_cards() {

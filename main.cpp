@@ -4,24 +4,23 @@
 #include "include/deck.h"
 #include "include/card.h"
 #include "include/hand.h"
+#include "include/player.h"
+#include "include/table.h"
 
 using namespace std;
  
 int main(int argc, char *argv[])
 {
-    Hand hand;
-    Deck deck;
-    deck.shuffle();
-    cout << deck.get_cards().size() << endl;
-    hand.add_card(deck.deal_card());
-    hand.add_card(deck.deal_card());
-    cout << deck.get_cards().size() << endl;
-    for (Card card : hand.get_cards()) {
-        card.print_card();
+    vector<Player> players;
+    for (int i = 0; i < 2; i++) {
+        Player player;
+        players.push_back(player);
     }
-    hand.play_card(hand.get_cards()[1]);
-    for (Card card : hand.get_cards()) {
-        card.print_card();
-    }
+    Table table(players);
+    table.show_table();
+    table.shuffle();
+    table.shuffle();
+    table.deal_cards(2);
+    table.show_table();
     return -1;
 }

@@ -14,16 +14,22 @@ Hand::~Hand() {
 }
 
 void Hand::add_card(Card card) {
-    cards.push_back(card);
+    this->cards.push_back(card);
 } 
 
 Card Hand::play_card(Card card) {
     //TODO: catch playing not existant card
-    cards.erase(std::remove(cards.begin(), cards.end(), card), cards.end());
+    this->cards.erase(std::remove(this->cards.begin(), this->cards.end(), card), this->cards.end());
     return card;
 }
 
 
 vector<Card> Hand::get_cards() {
-    return cards;
+    return this->cards;
+}
+
+void Hand::show_hand() {
+    for(Card card : this->cards) {
+        card.print_card();
+    }
 }

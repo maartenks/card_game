@@ -16,6 +16,7 @@ class Hand {
         vector<Card> get_cards();
         void add_card(Card card);
         Card play_card(Card card);
+        void show_hand();
     private:
         vector<Card> cards;
 
