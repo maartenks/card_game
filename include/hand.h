@@ -1,6 +1,6 @@
 
-#ifndef DECK_H_
-#define DECK_H_
+#ifndef HAND_H_
+#define HAND_H_
 
 #include <string>
 #include <vector>
@@ -8,15 +8,14 @@
 
 using namespace std;
 
-class Deck {
+class Hand {
    
     public:
-        Deck();
-        int deck_size;
+        Hand();
+        ~Hand();
         vector<Card> get_cards();
-        void create_deck();
-        void shuffle();
-        Card deal_card();
+        void add_card(Card card);
+        Card play_card(Card card);
     private:
         vector<Card> cards;
 

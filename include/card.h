@@ -28,6 +28,10 @@ class Card {
         Card(Rank rank, Suit suit);
         ~Card();
         void print_card();
+        bool operator==(const Card &rhs) const {
+            return rhs.rank == rank && rhs.suit == suit;
+        }
+        
     private:
         Rank rank;
         Suit suit;
