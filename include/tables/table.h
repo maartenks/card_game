@@ -4,9 +4,9 @@
 
 #include <string>
 #include <vector>
-#include "deck.h"
-#include "hand.h"
-#include "player.h"
+#include "../deck.h"
+#include "../hand.h"
+#include "../player.h"
 
 using namespace std;
 
@@ -20,9 +20,9 @@ class Table {
         void shuffle();
         void deal_cards(int amount);
         void show_table();
+        Deck deck;
     private:
         vector<Player> players;
-        Deck deck;
 
 };
 

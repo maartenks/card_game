@@ -2,9 +2,6 @@
 #ifndef CARD_H_
 #define CARD_H_
 
-#include <string>
-
-#define CARD_NUMBERS_LENGTH 13
 enum class Suit { clubs, diamonds, hearts, spades};
 enum class Rank { 
     ace = 1, 
@@ -31,7 +28,7 @@ class Card {
         bool operator==(const Card &rhs) const {
             return rhs.rank == rank && rhs.suit == suit;
         }
-        
+
     private:
         Rank rank;
         Suit suit;

@@ -36,5 +36,8 @@ void Deck::shuffle() {
     //TODO: random shuffle always shuffles the same it looks like
 }
 
+void Deck::burn_card() {
+    cards.pop_back();
+}
 
 

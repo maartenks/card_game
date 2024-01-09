@@ -9,6 +9,8 @@ set(SOURCES main.cpp
             include/hand.h 
             include/player.cpp
             include/player.h
-            include/table.cpp 
-            include/table.h)
+            include/tables/table.cpp 
+            include/tables/table.h
+            include/tables/poker_table.cpp
+            include/tables/poker_table.h)
 add_executable(CardGame ${SOURCES})

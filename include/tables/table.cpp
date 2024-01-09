@@ -33,6 +33,6 @@ void Table::deal_cards(int amount) {
 void Table::show_table() {
     for(int i = 0; i < players.size(); i++) {
         cout << "Player " << i + 1 << " cards:" << endl;
-        players[i].hand.show_hand();
+        players[i].show_hand();
     }
 }

@@ -17,6 +17,7 @@ class Deck {
         void create_deck();
         void shuffle();
         Card deal_card();
+        void burn_card();
     private:
         vector<Card> cards;
 

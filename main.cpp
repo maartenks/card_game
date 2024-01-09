@@ -5,7 +5,7 @@
 #include "include/card.h"
 #include "include/hand.h"
 #include "include/player.h"
-#include "include/table.h"
+#include "include/tables/table.h"
 
 using namespace std;
  
